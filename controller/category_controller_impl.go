@@ -14,7 +14,7 @@ type CategoryControllerImpl struct {
 	CategoryService service.CategoryService
 }
 
-func NewCategoryController(categoryService service.CategoryService) CategoryController {
+func NewCategoryController(categoryService service.CategoryService) *CategoryControllerImpl { // Best Practice returnnya harus CategoryController, ini cuma untuk belajar wire.Bind saja
 	return &CategoryControllerImpl{
 		CategoryService: categoryService,
 	}

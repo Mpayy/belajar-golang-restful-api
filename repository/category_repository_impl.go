@@ -11,7 +11,7 @@ import (
 type CategoryRepositoryImpl struct {
 }
 
-func NewCategoryRepository() CategoryRepository {
+func NewCategoryRepository() *CategoryRepositoryImpl { // Best Practice returnnya harus CategoryRepository, ini cuma untuk belajar wire.Bind saja
 	return &CategoryRepositoryImpl{}
 }
 

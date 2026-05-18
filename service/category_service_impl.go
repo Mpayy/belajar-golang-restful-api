@@ -18,7 +18,7 @@ type CategoryServiceImpl struct {
 	Validate           *validator.Validate
 }
 
-func NewCategoryService(CategoryRepository repository.CategoryRepository, DB *sql.DB, validate *validator.Validate) CategoryService {
+func NewCategoryService(CategoryRepository repository.CategoryRepository, DB *sql.DB, validate *validator.Validate) *CategoryServiceImpl { // Best Practice returnnya harus CategoryService, ini cuma untuk belajar wire.Bind saja
 	return &CategoryServiceImpl{
 		CategoryRepository: CategoryRepository,
 		DB:                 DB,
